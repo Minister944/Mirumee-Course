@@ -5,7 +5,9 @@ from crud import *
 
 async def homepage(request):
     with cursor() as cur:
-        result = get_players(cur)
+        result = []
+        for x in get_players(cur):
+            result.append(x.__dict__) 
 
     return JSONResponse(result)
 
