@@ -9,7 +9,8 @@ with cursor() as cur:
         attac_points INTEGER NOT NULL,
         status text NOT NULL DEFAULT "offline",
         kills INTEGER DEFAULT 0,
-        deaths INTEGER DEFAULT 0
+        deaths INTEGER DEFAULT 0,
+        hashed_password text not NULL
          )
         '''
     )
